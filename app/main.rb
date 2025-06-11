@@ -23,3 +23,9 @@ bus.use(LoggingMiddleware.new)
 
 bus.dispatch(DepositCommand.new(account_id: 'acc-1', amount: 200))
 bus.dispatch(WithdrawCommand.new(account_id: 'acc-1', amount: 80))
+
+events = event_store.load_events('acc-1')
+account = Account.new('acc-1')
+account.load_from_history(events)
+
+puts "Account balance: #{account.balance}"
