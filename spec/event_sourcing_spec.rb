@@ -1,4 +1,3 @@
-require_relative '../app/main'
 require 'rspec'
 
 RSpec.describe 'Event Sourcing with CommandBus' do
