@@ -1,0 +1,19 @@
+plugins: rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 3.4
+  NewCops: enable
+  Exclude:
+    - "spec/**/*"
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 12
+
+Lint/EmptyClass:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
