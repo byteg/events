@@ -2,6 +2,7 @@
 
 require_relative 'event_store'
 require_relative 'command_bus'
+require_relative 'handlers/handler_base'
 require_relative 'handlers/deposit_handler'
 require_relative 'handlers/withdraw_handler'
 require_relative 'commands/command'
