@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'handler_base'
-
-class WithdrawHandler < HandlerBase
+class WithdrawHandler < BaseHandler
   def call(command)
     events = event_store.load_events(command.account_id)
     account = Account.new(command.account_id).load_from_history(events)
